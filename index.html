@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link  rel="stylesheet" type="text/css"  href="./bootstrap.min.css">
+
+          <script>
+               let $ = require('jquery');
+               let jQuery= require('jquery');                    
+            </script>
+    </head>
+    <body>
+
+            <form class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="text">Text : </label>
+                    <input type="text" class="form-control" id="text">
+                </div>
+               
+                
+                <button type="button" class="btn btn-default">Play</button>
+            </form>
+
+        <script >
+            $('form button').on('click',function()
+            {
+                let Speech = require('speak-tts') //if you use es5
+                Speech.init()
+                Speech.setLanguage(null) // activate language autodetection
+
+                Speech.speak({
+                    text: $("#text").val(),
+                    onError: (e) => {console.log('sorry an error occured.', e)}, // optionnal error callback
+                    onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
+                 })
+
+         
+
+            });
+           //import Speech from 'speak-tts' // es6
+        
+
+        </script>
+    
+    </body>
+</html>

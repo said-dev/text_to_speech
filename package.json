@@ -1,0 +1,24 @@
+{
+  "name": "text_to_speech",
+  "version": "1.0.0",
+  "description": "text to speech",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/said-dev/text_to_speech.git"
+  },
+  "keywords": [
+    "text",
+    "to",
+    "speech"
+  ],
+  "author": "Said Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/said-dev/text_to_speech/issues"
+  },
+  "homepage": "https://github.com/said-dev/text_to_speech#readme"
+}
